@@ -9,4 +9,4 @@ Paraffin HTTP/MQTT/CoAP Broker is based on Ponte and service REST API for IoT an
 * Change directory. `cd broker`
 * `npm install`
 * Run the server with: `npm start`
-* After runing Broker, you can connect to REST API. in HTTP the address is http://localhost:80/resources/TENANT/YOUR_TOPIC and for MQTT topic is TENANT/YOUR_TOPIC. The authentication performs with API Server in TENANT name's Table.
+* After runing Broker, you can connect to REST API. in HTTP the address is http://localhost:3000/resources/TENANT/YOUR_TOPIC and for MQTT topic is TENANT/YOUR_TOPIC. The authentication performs with API Server in TENANT name's Table.
