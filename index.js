@@ -3,27 +3,9 @@
 var ponte = require('ponte')
 const config = require('./config')
 
-try {
-    var AuthIOK = require(`./lib/auth-${process.env.PROCESS_TYPE}`)
-} catch (error) {
-    if (error.code === 'MODULE_NOT_FOUND') {
-        throw new Error(`No config for process type ${process.env.PROCESS_TYPE}`)
-    }
-    throw error
-}
+var AuthIOK = require('./lib/direct-mongo')
 
-if (process.env.PROCESS_TYPE == 'parse-server') {
 var envAuth = {
-    appId: config('APP_ID'),
-    restapiKey: config('REST_API_KEY'),
-    javascriptKey: config('JAVASCRIPT_KEY'),
-    masterKey: config('MASTER_KEY'),
-    apiserverURL: config('API_SERVER_URL'),
-    timeout: config('REQUEST_TIMEOUT'),
-    authType: config('AUTHENTICATION_TYPE'),
-    jwtSecret: config('JWT_SECRET')
-}
-} else var envAuth = {
 
 }
 
@@ -55,12 +37,12 @@ var ponteSettings = {
     persistence: {
         // same as http://mcollina.github.io/mosca/docs/lib/persistence/mongo.js.html
         type: "mongo",
-        url: config('DB_URL') + '/' + config('DB_PONTE_NAME')
+        url: config('DB_PONTE_NAME')
     },
     broker: {
         // same as https://github.com/mcollina/ascoltatori#mongodb
         type: "mongo",
-        url: config('DB_URL') + '/' + config('DB_PONTE_NAME')
+        url: config('DB_PONTE_NAME')
     }
 }
 
