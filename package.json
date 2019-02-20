@@ -1,0 +1,39 @@
+{
+  "name": "brokero",
+  "version": "0.2.0",
+  "description": "Broker with authentication ability for Paraffin Platform.",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/paraffiniot/broker.git"
+  },
+  "keywords": [
+    "mqtt",
+    "coap",
+    "http",
+    "broker",
+    "authentication",
+    "authorization",
+    "credintial"
+  ],
+  "author": "Hadi Mahdavi",
+  "license": "MIT",
+  "dependencies": {
+    "dotenv": "^6.1.0",
+    "joi": "^13.7.0",
+    "jsonwebtoken": "^8.4.0",
+    "ponte": "0.0.16"
+  },
+  "devDependencies": {
+    "supertest": "3.3.0",
+    "mocha": "5.2.0"
+  },
+  "bugs": {
+    "url": "https://github.com/paraffiniot/broker/issues"
+  },
+  "homepage": "https://github.com/paraffiniot/broker#readme"
+}
