@@ -11,7 +11,11 @@ Paraffin HTTP/MQTT/CoAP Broker is based on Ponte and service REST API for IoT or
 * If you running in Development mode, for loading environment variable, it's necessary to change env.sample file name to .env and customize it.
 * Run the server with: `npm start`
 * After runing Broker, you can connect to REST API. in HTTP the address is http://localhost:3000/resources/TENANT/YOUR_TOPIC and for MQTT topic is TENANT/YOUR_TOPIC.
-```curl -X PUT \
+
+```
+curl -X PUT \
 -d "Hello World" \
-http://localhost:3000/resources/hello```
+http://localhost:3000/resources/hello
+```
+
 The authentication performs with Mongodb server directly. You can change and customize Mongodb server settings with environemt variables.
