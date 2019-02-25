@@ -2,7 +2,7 @@
 
 [![Build Status](https://travis-ci.org/ParaffinIoT/broker.svg?branch=dev)](https://travis-ci.com/ParaffinIoT/broker) [![Greenkeeper badge](https://badges.greenkeeper.io/ParaffinIoT/broker.svg)](https://greenkeeper.io/)
 
-Paraffin HTTP/MQTT/CoAP Broker is based on Ponte and service REST API for IoT or Internet of Things.
+Paraffin HTTP/MQTT/CoAP Broker is based on NodeJS and service REST API for IoT or Internet of Things.
 
 ## Installation
 * Make sure you have at least Node 4.3
