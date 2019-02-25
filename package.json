@@ -4,8 +4,12 @@
   "description": "Broker with authentication ability for Paraffin Platform.",
   "main": "index.js",
   "scripts": {
-    "test": "npm test",
-    "start": "node index.js"
+    "start": "PROCESS_TYPE=direct-mongo node index.js",
+    "prepush": "npm run lint",
+    "prettier": "prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write './{,!(node_modules)/**}/*.js'",
+    "lint": "# Run lint and fix \n\t standard --verbose  --fix | snazzy",
+    "pretest": "npm run lint",
+    "test": "#⚡ Run test \n\t PROCESS_TYPE=testing mocha tests/setup.js  './{,!(node_modules|coverage|docs)/**/}*.test.js' --color --no-timeouts --exit"
   },
   "repository": {
     "type": "git",
@@ -29,8 +33,20 @@
     "ponte": "0.0.16"
   },
   "devDependencies": {
-    "supertest": "3.3.0",
-    "mocha": "5.2.0"
+    "chai": "4.2.0",
+    "chai-as-promised": "7.1.1",
+    "mocha": "6.0.1",
+    "nock": "10.0.6",
+    "prettier": "^1.14.3",
+    "sinon": "7.2.4",
+    "sinon-chai": "3.3.0",
+    "snazzy": "8.0.0",
+    "standard": "12.0.1"
+  },
+  "standard": {
+    "env": [
+      "mocha"
+    ]
   },
   "bugs": {
     "url": "https://github.com/paraffiniot/broker/issues"
