@@ -12,10 +12,15 @@ before(() => {
 })
 
 beforeEach(function beforeEach () {
-  this.sandbox = sinon.sandbox.create()
+  this.sandbox = sinon.createSandbox()
   nock.cleanAll()
 })
 
 afterEach(function afterEach () {
   this.sandbox.restore()
 })
+
+// require('../config/components/mongo.test')
+// require('../config/components/common.test')
+// require('../config/components/logger.test')
+require('../lib/http.test')
