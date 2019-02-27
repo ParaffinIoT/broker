@@ -1,5 +1,5 @@
 {
-  "name": "brokero",
+  "name": "broker",
   "version": "0.2.0",
   "description": "Broker with authentication ability for Paraffin Platform.",
   "main": "index.js",
@@ -36,6 +36,7 @@
     "chai": "4.2.0",
     "chai-as-promised": "7.1.1",
     "mocha": "6.0.2",
+    "supertest": "3.4.2",
     "nock": "10.0.6",
     "prettier": "^1.14.3",
     "sinon": "7.2.5",
