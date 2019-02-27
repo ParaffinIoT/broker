@@ -23,4 +23,4 @@ afterEach(function afterEach () {
 // require('../config/components/mongo.test')
 // require('../config/components/common.test')
 // require('../config/components/logger.test')
-require('../lib/http.test')
+// require('../lib/http.test')
