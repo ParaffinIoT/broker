@@ -1,0 +1,51 @@
+
+version: '3'
+services:
+    mongodb:
+      image: mongo:3.6.6
+      container_name: mongodb
+      networks:
+        api_net:
+          ipv4_address: 172.21.180.100
+
+    broker:
+      build:
+        context: .
+        dockerfile: Dockerfile
+      container_name: broker
+      command: node index.js
+      expose:
+        - 1883
+        - 3000
+        - 2345
+      networks:
+        api_net:
+          ipv4_address: 172.21.180.200
+      environment:
+        NODE_ENV: production
+        PROCESS_TYPE: direct-mongo
+        APP_NAME: 'Paraffin Broker'
+        DB_URL: mongodb://172.21.180.100:27017
+        DB_PONTE_NAME: mongodb://172.21.180.100:27017/ponte
+        DB_AUTH_URL: mongodb://172.21.180.100:27017/
+        DB_AUTH_NAME: paraffin
+        DB_AUTH_COLLECTION: auth
+        MQTT_PORT: 1883
+        HTTP_PORT: 3000
+        COAP_PORT: 2345
+        AUTHENTICATION_TYPE: direct-mongo
+        REQUEST_TIMEOUT: 3000
+      volumes:
+        - .:/app
+        - /app/node_modules
+      # env_file: .env
+      depends_on:
+        - mongodb
+# Network config
+networks:
+  api_net:
+    driver: bridge
+    ipam:
+       driver: default
+       config:
+       - subnet: 172.21.180.0/24
