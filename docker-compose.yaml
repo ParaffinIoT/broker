@@ -41,7 +41,6 @@ services:
       # env_file: .env
       depends_on:
         - mongodb
-       
 # Network config
 networks:
   api_net:
