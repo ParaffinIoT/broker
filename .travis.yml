@@ -7,7 +7,23 @@ node_js:
 before_install:
 - git clone https://github.com/ParaffinIoT/apiserver
 - cd apiserver
-- mv env.sample .env
+- touch .env
+- echo "PROCESS_TYPE='parse-server'" > .env
+- echo "DB_URL=mongodb://localhost:27017/paraffin" > .env
+- echo "JAVASCRIPT_KEY=JAVASCRIPT_KEY" > .env
+- echo "CLOUD_CODE_MAIN=/cloud/main.js" > .env
+- echo "PUBLIC_SERVER_URL=http://localhost:1337/api" > .env
+- echo "MASTER_KEY=MASTER_KEY" > .env
+- echo "CLIENT_KEY=CLIENT_KEY" > .env
+- echo "JAVASCRIPT_KEY=JAVASCRIPT_KEY" > .env
+- echo "APP_NAME=Paraffin Platform" > .env
+- echo "API_SERVER_URL=http://localhost:1337/api" > .env
+- echo "PARSE_MOUNT=api" > .env
+- echo "APP_ID=APP_ID" > .env
+- echo "PORT=1337" > .env
+- echo "ALLOW_INSECURE_HTTP=true" > .env
+- echo "BROKER_IP=::ffff:127.0.0.1" > .env
+- echo "COLLECTION_PREFIX=COLLECTION_PREFIX" > .env
 - npm install
 - npm start
 - cd ..
