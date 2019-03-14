@@ -24,6 +24,12 @@ before_install:
 - echo "ALLOW_INSECURE_HTTP=true" > .env
 - echo "BROKER_IP=::ffff:127.0.0.1" > .env
 - echo "COLLECTION_PREFIX=COLLECTION_PREFIX" > .env
+- echo "LOG_LEVEL=info" > .env
+- echo "DOTNET_KEY=DOTNET_KEY" > .env
+- echo "DASHOBOARD_PASS=admin" > .env
+- echo "DASHBOARD_USER=admin" > .env
+- echo "REST_API_KEY=REST_API_KEY" > .env
+- echo "REST_KEY=REST_KEY" > .env
 - npm install
 - npm start
 - cd ..
