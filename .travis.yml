@@ -1,9 +1,39 @@
+os:
+- linux
 services: mongodb
-before_script:
-  - sleep 15
 language: node_js
 node_js:
 - stable
+env:
+- PROCESS_TYPE=parse-server
+- APP_NAME='Paraffin Broker'
+- DB_URL=mongodb://localhost:27017/paraffin
+- ALLOW_INSECURE_HTTP=true
+- ALLOW_INSECURE_MQTT=true
+- ALLOW_INSECURE_COAP=true
+- DB_PONTE_NAME=mongodb://localhost:27017/ponte
+- MQTT_PORT=2883
+- HTTP_PORT=3000
+- COAP_PORT=2345
+- AUTHENTICATION_TYPE=parse-server
+- REQUEST_TIMEOUT=3000
+- JAVASCRIPT_KEY=JAVASCRIPT_KEY
+- MASTER_KEY=MASTER_KEY
+- REST_KEY=REST_KEY
+- CLIENT_KEY=CLIENT_KEY
+- DOTNET_KEY=DOTNET_KEY
+- LOG_LEVEL=info
+- API_SERVER_URL='http://localhost:5000/api'
+- PARSE_MOUNT=api
+- APP_ID=APP_ID
+- REST_API_KEY=REST_API_KEY
+- FILE_KEY=FILE_KEY
+- PORT=5000
+before_install:
+- sudo git clone https://github.com/ParaffinIoT/apiserver
+- cd apiserver
+- sudo npm install
+- sudo npm start
 install:
 - npm install
 script:
