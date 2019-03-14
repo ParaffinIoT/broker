@@ -15,6 +15,7 @@ before_install:
 - echo "PUBLIC_SERVER_URL=http://localhost:1337/api" >> .env
 - echo "MASTER_KEY=MASTER_KEY" >> .env
 - echo "CLIENT_KEY=CLIENT_KEY" >> .env
+- echo "FILE_KEY=FILE_KEY" >> .env
 - echo "JAVASCRIPT_KEY=JAVASCRIPT_KEY" >> .env
 - echo "APP_NAME=Paraffin Platform" >> .env
 - echo "API_SERVER_URL=http://localhost:1337/api" >> .env
