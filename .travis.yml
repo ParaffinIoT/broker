@@ -7,29 +7,29 @@ node_js:
 before_install:
 - git clone https://github.com/ParaffinIoT/apiserver
 - cd apiserver
-- cat > .env
-- cat "PROCESS_TYPE='parse-server'" >> .env
-- cat "DB_URL=mongodb://localhost:27017/paraffin" >> .env
-- cat "JAVASCRIPT_KEY=JAVASCRIPT_KEY" >> .env
-- cat "CLOUD_CODE_MAIN=/cloud/main.js" >> .env
-- cat "PUBLIC_SERVER_URL=http://localhost:1337/api" >> .env
-- cat "MASTER_KEY=MASTER_KEY" >> .env
-- cat "CLIENT_KEY=CLIENT_KEY" >> .env
-- cat "JAVASCRIPT_KEY=JAVASCRIPT_KEY" >> .env
-- cat "APP_NAME=Paraffin Platform" >> .env
-- cat "API_SERVER_URL=http://localhost:1337/api" >> .env
-- cat "PARSE_MOUNT=api" >> .env
-- cat "APP_ID=APP_ID" >> .env
-- cat "PORT=1337" >> .env
-- cat "ALLOW_INSECURE_HTTP=true" >> .env
-- cat "BROKER_IP=::ffff:127.0.0.1" >> .env
-- cat "COLLECTION_PREFIX=COLLECTION_PREFIX" >> .env
-- cat "LOG_LEVEL=info" >> .env
-- cat "DOTNET_KEY=DOTNET_KEY" >> .env
-- cat "DASHOBOARD_PASS=admin" >> .env
-- cat "DASHBOARD_USER=admin" >> .env
-- cat "REST_API_KEY=REST_API_KEY" >> .env
-- cat "REST_KEY=REST_KEY" >> .env
+- touch .env
+- echo "PROCESS_TYPE='parse-server'" >> .env
+- echo "DB_URL=mongodb://localhost:27017/paraffin" >> .env
+- echo "JAVASCRIPT_KEY=JAVASCRIPT_KEY" >> .env
+- echo "CLOUD_CODE_MAIN=/cloud/main.js" >> .env
+- echo "PUBLIC_SERVER_URL=http://localhost:1337/api" >> .env
+- echo "MASTER_KEY=MASTER_KEY" >> .env
+- echo "CLIENT_KEY=CLIENT_KEY" >> .env
+- echo "JAVASCRIPT_KEY=JAVASCRIPT_KEY" >> .env
+- echo "APP_NAME=Paraffin Platform" >> .env
+- echo "API_SERVER_URL=http://localhost:1337/api" >> .env
+- echo "PARSE_MOUNT=api" >> .env
+- echo "APP_ID=APP_ID" >> .env
+- echo "PORT=1337" >> .env
+- echo "ALLOW_INSECURE_HTTP=true" >> .env
+- echo "BROKER_IP=::ffff:127.0.0.1" >> .env
+- echo "COLLECTION_PREFIX=COLLECTION_PREFIX" >> .env
+- echo "LOG_LEVEL=info" >> .env
+- echo "DOTNET_KEY=DOTNET_KEY" >> .env
+- echo "DASHOBOARD_PASS=admin" >> .env
+- echo "DASHBOARD_USER=admin" >> .env
+- echo "REST_API_KEY=REST_API_KEY" >> .env
+- echo "REST_KEY=REST_KEY" >> .env
 - npm install
 - npm start
 - cd ..
