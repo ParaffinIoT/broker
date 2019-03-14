@@ -4,7 +4,7 @@ services: mongodb
 language: node_js
 node_js:
 - stable
-before_install:
+before_script:
 - git clone https://github.com/ParaffinIoT/apiserver
 - cd apiserver
 - touch .env
