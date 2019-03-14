@@ -3,7 +3,7 @@
 var ponte = require('ponte')
 const config = require('./config')
 
-var AuthIOK = require('./lib/direct-mongo')
+var AuthIOK = require('./lib/parse-server')
 
 var envAuth = {
 
