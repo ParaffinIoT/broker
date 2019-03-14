@@ -30,10 +30,11 @@ env:
 - FILE_KEY=FILE_KEY
 - PORT=5000
 before_install:
-- sudo git clone https://github.com/ParaffinIoT/apiserver
+- git clone https://github.com/ParaffinIoT/apiserver
 - cd apiserver
-- sudo npm install
-- sudo npm start
+- npm install
+- npm start
+- cd ..
 install:
 - npm install
 script:
