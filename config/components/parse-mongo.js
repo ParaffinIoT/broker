@@ -5,10 +5,10 @@ const joi = require('joi')
 const envVarsSchema = joi
   .object({
     DB_PONTE_NAME: joi.string().regex(/^mongodb:\/\//).required(),
-    JAVASCRIPT_KEY: joi.string().required(),
-    MASTER_KEY: joi.string().required(),
-    APP_ID: joi.string().required(),
-    API_SERVER_URL: joi.string().required()
+    API_SERVER_URL: joi.string().default('http://localhost:1337/parse'),
+    APP_ID: joi.string().default('APP_ID'),
+    JAVASCRIPT_KEY: joi.string().default('JAVASCRIPT_KEY'),
+    MASTER_KEY: joi.string().default('MASTER_KEY')
   })
   .unknown()
 
