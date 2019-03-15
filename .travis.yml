@@ -1,10 +1,12 @@
+os:
+  - linux
 services: mongodb
 before_script:
   - sleep 15
 language: node_js
 node_js:
-- stable
+  - stable
 install:
-- npm install
+  - npm install
 script:
-- npm test
+  - npm test
