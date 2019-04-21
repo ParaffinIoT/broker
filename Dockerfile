@@ -1,22 +1,20 @@
-FROM node:8.11.3
+FROM node:8
 
-LABEL vendor="iokloud.com"
-LABEL com.iokloud.author="Hadi Mahdavi"
+# Create app directory
+WORKDIR /usr/src/app
 
-ENV ROOTPATH=/app
-
-ARG NODE_ENV=production
-ENV NODE_ENV=${NODE_ENV}
-
-WORKDIR $ROOTPATH
-
-COPY package.json .
+# Install app dependencies
+COPY package*.json ./
 
 RUN npm install
+# If you are building your code for production
+# RUN npm ci --only=production
 
+# Bundle app source
 COPY . .
 
-USER  node
+EXPOSE 3000
+EXPOSE 1883
+EXPOSE 2345
 
-
-
+CMD [ "npm", "start" ]
