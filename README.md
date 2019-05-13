@@ -1,6 +1,6 @@
 # Paraffin Broker service
 
-[![Build Status](https://travis-ci.org/ParaffinIoT/broker.svg)](https://travis-ci.com/ParaffinIoT/broker) [![Greenkeeper badge](https://badges.greenkeeper.io/ParaffinIoT/broker.svg)](https://greenkeeper.io/)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Build Status](https://travis-ci.org/ParaffinIoT/broker.svg)](https://travis-ci.com/ParaffinIoT/broker) [![Greenkeeper badge](https://badges.greenkeeper.io/ParaffinIoT/broker.svg)](https://greenkeeper.io/)
 
 Paraffin HTTP/MQTT/CoAP Broker is based on NodeJS and service REST API for IoT or Internet of Things.
 
