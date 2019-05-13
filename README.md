@@ -1,6 +1,6 @@
 # Paraffin Broker service
 
-[![Build Status](https://travis-ci.org/ParaffinIoT/broker.svg)](https://travis-ci.com/ParaffinIoT/broker) [![Greenkeeper badge](https://badges.greenkeeper.io/ParaffinIoT/broker.svg)](https://greenkeeper.io/)
+[![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/) [![Build Status](https://travis-ci.org/ParaffinIoT/broker.svg)](https://travis-ci.com/ParaffinIoT/broker) [![Greenkeeper badge](https://badges.greenkeeper.io/ParaffinIoT/broker.svg)](https://greenkeeper.io/)
 
 Paraffin HTTP/MQTT/CoAP Broker is based on NodeJS and service REST API for IoT or Internet of Things.
 
@@ -22,3 +22,8 @@ http://localhost:3000/resources/hello
 ```
 
 The authentication performs with Mongodb server directly. You can change and customize Mongodb server settings with environemt variables.
+
+
+## Contributing [![contributions welcome](https://img.shields.io/badge/contributions-welcome-brightgreen.svg?style=flat)](https://github.com/dwyl/esta/issues)
+Anyone with interest in or experience with the following technologies are encouraged to join the project.
+And if you fancy it, join the [Telegram group](t.me/joinchat/AuKmG05CNFTz0bsBny9igg) here for Devs and say Hello!
