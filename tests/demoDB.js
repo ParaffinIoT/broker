@@ -531,6 +531,7 @@ MongoClient.connect(
       console.log('client ID: ' + docs[i].clientId.toString() + ' was inserted in db.')
       dbo.collection(collectionName).insertOne(docs[i], function (err, res) {
         if (err) throw err
+        debug(res)
       })
     }
     // close the connection to db when you are done with it
