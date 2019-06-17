@@ -2,7 +2,7 @@
 version: '3.3'
 services:
     mongodb:
-      image: mongo:3.6.6
+      image: mongo:4.1
       container_name: mongodb
       hostname: mongodb
 
@@ -12,7 +12,7 @@ services:
         labels:
            - "Project.Name=Paraffin"
            - "Module.Name=broker"
-           - "version=0.01"
+           - "version=0.02"
            - "maintainer=rafiee1001@gmail.com"
         dockerfile: Dockerfile
       image: broker
@@ -25,18 +25,14 @@ services:
         - 2345
       environment:
         NODE_ENV: production
-        PROCESS_TYPE: parse-server
+        PROCESS_TYPE: direct-mongo
         APP_NAME: Paraffin Broker
-        DB_URL: mongodb://mongodb:27017
         DB_PONTE_NAME: mongodb://mongodb:27017/ponte
-        DB_AUTH_URL: mongodb://mongodb:27017/
-        DB_AUTH_NAME: paraffin
-        DB_AUTH_COLLECTION: auth
+        DB_AUTH_URL: mongodb://mongodb:27017/paraffin
+        DB_AUTH_COLLECTION: authBroker
         MQTT_PORT: 1883
         HTTP_PORT: 3000
-        COAP_PORT: 2345
-        AUTHENTICATION_TYPE: parse-server
-        REQUEST_TIMEOUT: 3000
+        COAP_PORT: 5683
       volumes:
         - .:/usr/src/app
         - /usr/src/app/node_modules

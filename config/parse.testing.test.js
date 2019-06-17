@@ -1,3 +1,5 @@
+/*
+
 'use strict'
 
 const {
@@ -17,7 +19,6 @@ describe('Testing  Envs', () => {
       MQTT_PORT: 1883,
       HTTP_PORT: 3000,
       COAP_PORT: 2345,
-      AUTHENTICATION_TYPE: 'parseserver',
       REQUEST_TIMEOUT: 3000,
       LOG_LEVEL: 'info',
       LOGGER_ENABLE: true,
@@ -38,7 +39,6 @@ describe('Testing  Envs', () => {
       'MQTT_PORT',
       'HTTP_PORT',
       'COAP_PORT',
-      'AUTHENTICATION_TYPE',
       'REQUEST_TIMEOUT',
       'LOG_LEVEL',
       'LOGGER_ENABLE',
@@ -49,3 +49,5 @@ describe('Testing  Envs', () => {
     ])
   })
 })
+
+*/

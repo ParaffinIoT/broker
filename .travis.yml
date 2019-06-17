@@ -1,12 +1,8 @@
 os:
   - linux
 services: mongodb
-before_script:
-  - sleep 15
 language: node_js
+before_script:
+  - node ./tests/demoDB
 node_js:
   - stable
-install:
-  - npm install
-script:
-  - npm test
