@@ -2,7 +2,7 @@
 
 var ponte = require('ponte')
 const config = require('./config')
-var authBroker = require('@authbroker/authbroker')
+var AuthBroker = require('@authbroker/authbroker')
 
 var envAuth = {
   db: {
@@ -36,7 +36,7 @@ var envAuth = {
   }
 }
 
-var auth = new authBroker(envAuth)
+var auth = new AuthBroker(envAuth)
 
 var ponteSettings = {
   logger: {
