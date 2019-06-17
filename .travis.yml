@@ -3,6 +3,6 @@ os:
 services: mongodb
 language: node_js
 before_script:
-  - node ./example/demoDB
+  - node ./tests/demoDB
 node_js:
   - stable
