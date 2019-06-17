@@ -2,14 +2,41 @@
 
 var ponte = require('ponte')
 const config = require('./config')
-
-var AuthIOK = require('./lib/parse-server')
+var authBroker = require('@authbroker/authbroker')
 
 var envAuth = {
-
+  db: {
+    type: 'mongo',
+    url: config('DB_AUTH_URL'),
+    collectionName: config('DB_AUTH_COLLECTION'),
+    methodology: 'vertical',
+    option: {}
+  },
+  salt: {
+    salt: 'salt', //salt by pbkdf2 method
+    digest: 'sha512',
+    // size of the generated hash
+    hashBytes: 64,
+    // larger salt means hashed passwords are more resistant to rainbow table, but
+    // you get diminishing returns pretty fast
+    saltBytes: 16,
+    // more iterations means an attacker has to take longer to brute force an
+    // individual password, so larger is better. however, larger also means longer
+    // to hash the password. tune so that hashing the password takes about a
+    // second
+    iterations: 10
+  },
+  adapters: {
+    mqtt: {
+      limitW: 50,
+      limitMPM: 10
+    },
+    http: {},
+    coap: {}
+  }
 }
 
-var auth = new AuthIOK(envAuth)
+var auth = new authBroker(envAuth)
 
 var ponteSettings = {
   logger: {
@@ -64,6 +91,6 @@ server.on('updated', function (resource, buffer) {
 server.on('ready', setup)
 
 // fired when the server is ready
-function setup () {
+function setup() {
   console.log('Brokero is up and running')
 }
