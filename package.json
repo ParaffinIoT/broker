@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "start": "node index.js",
-    "prepush": "npm run lint",
+    // "prepush": "npm run lint",
     "prettier": "prettier --print-width 80 --no-semi --single-quote --trailing-comma es5 --write './{,!(node_modules)/**}/*.js'",
     "lint": "# Run lint and fix \n\t standard --verbose  --fix | snazzy",
-    "pretest": "npm run lint",
+    // "pretest": "npm run lint",
     "test": "#⚡ Run test \n\t PROCESS_TYPE=testing mocha tests/setup.js  './{,!(node_modules|coverage|docs)/**/}*.test.js' --color --no-timeouts --exit"
   },
   "repository": {
