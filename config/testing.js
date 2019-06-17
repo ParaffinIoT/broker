@@ -1,7 +1,7 @@
 'use strict'
 
 const logger = require('./components/logger')
-const parse = require('./components/parse-mongo')
+const mongo = require('./components/mongo')
 const common = require('./components/common')
 
-module.exports = Object.assign({}, logger, parse, common)
+module.exports = Object.assign({}, logger, mongo, common)

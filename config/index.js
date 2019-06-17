@@ -16,6 +16,7 @@ try {
   throw error
 }
 
+
 module.exports = env => {
   if (config[env] === undefined) throw new Error(`No config for env variable ${env}`)
   return config[env]
