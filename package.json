@@ -23,7 +23,7 @@
   "author": "Hadi Mahdavi",
   "license": "MIT",
   "dependencies": {
-    "@authbroker/authbroker": "0.0.3",
+    "@authbroker/authbroker": "0.0.4",
     "dotenv": "^7.0.0",
     "joi": "^14.3.1",
     "ponte": "0.0.16"
